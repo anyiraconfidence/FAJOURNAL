@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #09090B;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #17171F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7C3AED;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9333EA;
+}
+
+.glassmorphism {
+  background: rgba(23, 23, 31, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.glow-purple-lg {
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+}
+
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(147, 51, 234, 0.05) 100%);
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary hover:bg-gradient-end rounded-3xl font-semibold text-white transition-all duration-300 shadow-purple-glow hover:shadow-purple-glow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-card hover:bg-secondary rounded-3xl font-semibold text-white transition-all duration-300 border border-white/10;
+  }
+
+  .card-base {
+    @apply bg-card rounded-3xl border border-white/10 p-4 glassmorphism;
+  }
+
+  .heading-lg {
+    @apply text-3xl font-bold text-white;
+  }
+
+  .heading-md {
+    @apply text-2xl font-bold text-white;
+  }
+
+  .heading-sm {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .text-secondary {
+    @apply text-gray-400;
+  }
+}
